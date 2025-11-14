@@ -20,10 +20,10 @@ def login_view(request):
                 return redirect('dashboard')
             else:
                 messages.error(request, 'Invalid username or password.')
-        else:
-            form = LoginForm()
+    else:
+        form = LoginForm()
 
-        return render(request, 'users/login.html', {'form' : form})
+    return render(request, 'users/login.html', {'form' : form})
     
 @login_required
 def logout_view(request):

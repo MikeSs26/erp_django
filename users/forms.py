@@ -11,7 +11,7 @@ class LoginForm(AuthenticationForm):
         })
     )
 
-    username = forms.CharField(
+    password = forms.CharField(
         label= 'Password',
         widget= forms.PasswordInput(attrs={
             'class': 'form-control',
@@ -19,6 +19,6 @@ class LoginForm(AuthenticationForm):
         })
     )
 
-    class Meta:
-        model = User
-        fields= ['user', 'password']
+#    class Meta:
+#        model = User
+#        fields= ['user', 'password']
